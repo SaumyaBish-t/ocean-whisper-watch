@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Maritime Color System */
+    --background: 210 25% 98%;
+    --foreground: 210 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 15%;
+
+    /* Ocean Blue Primary */
+    --primary: 210 85% 32%;
+    --primary-foreground: 210 25% 98%;
+    --primary-glow: 210 85% 45%;
+
+    /* Coastal Secondary */
+    --secondary: 200 100% 92%;
+    --secondary-foreground: 210 85% 32%;
+
+    --muted: 210 40% 94%;
+    --muted-foreground: 210 15% 45%;
+
+    /* Ocean Accent */
+    --accent: 195 95% 88%;
+    --accent-foreground: 210 85% 32%;
+
+    /* Alert Colors */
+    --destructive: 15 85% 55%;
+    --destructive-foreground: 210 25% 98%;
+    --warning: 35 95% 55%;
+    --warning-foreground: 210 25% 98%;
+
+    --border: 210 25% 88%;
+    --input: 210 25% 88%;
+    --ring: 210 85% 32%;
+
+    --radius: 0.75rem;
+
+    /* Ocean Gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-coastal: linear-gradient(180deg, hsl(var(--accent)), hsl(var(--secondary)));
+    --gradient-depth: linear-gradient(to bottom, hsl(210 85% 32%), hsl(210 95% 15%));
+
+    /* Coastal Shadows */
+    --shadow-ocean: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-coastal: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-depth: 0 20px 60px -10px hsl(var(--primary) / 0.4);
+
+    /* Animation Timing */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-wave: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    /* Sidebar Maritime Theme */
+    --sidebar-background: 210 40% 96%;
+    --sidebar-foreground: 210 15% 25%;
+    --sidebar-primary: 210 85% 32%;
+    --sidebar-primary-foreground: 210 25% 98%;
+    --sidebar-accent: 195 95% 88%;
+    --sidebar-accent-foreground: 210 85% 32%;
+    --sidebar-border: 210 25% 88%;
+    --sidebar-ring: 210 85% 45%;
+  }
+
+  .dark {
+    /* Deep Ocean Dark Theme */
+    --background: 210 95% 8%;
+    --foreground: 210 25% 95%;
+
+    --card: 210 85% 12%;
+    --card-foreground: 210 25% 95%;
+
+    --popover: 210 85% 12%;
+    --popover-foreground: 210 25% 95%;
+
+    --primary: 195 95% 75%;
+    --primary-foreground: 210 95% 8%;
+    --primary-glow: 195 95% 85%;
+
+    --secondary: 210 65% 18%;
+    --secondary-foreground: 210 25% 95%;
+
+    --muted: 210 65% 18%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 210 65% 22%;
+    --accent-foreground: 195 95% 75%;
+
+    --destructive: 15 85% 65%;
+    --destructive-foreground: 210 95% 8%;
+    --warning: 35 95% 65%;
+    --warning-foreground: 210 95% 8%;
+
+    --border: 210 65% 18%;
+    --input: 210 65% 18%;
+    --ring: 195 95% 75%;
+
+    /* Dark Ocean Gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(210 85% 25%), hsl(195 95% 45%));
+    --gradient-coastal: linear-gradient(180deg, hsl(210 65% 22%), hsl(210 85% 12%));
+    --gradient-depth: linear-gradient(to bottom, hsl(210 95% 8%), hsl(210 100% 5%));
+
+    /* Dark Sidebar */
+    --sidebar-background: 210 95% 6%;
+    --sidebar-foreground: 210 25% 85%;
+    --sidebar-primary: 195 95% 65%;
+    --sidebar-primary-foreground: 210 95% 8%;
+    --sidebar-accent: 210 65% 15%;
+    --sidebar-accent-foreground: 195 95% 75%;
+    --sidebar-border: 210 65% 15%;
+    --sidebar-ring: 195 95% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
